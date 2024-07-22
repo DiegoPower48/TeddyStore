@@ -1,0 +1,22 @@
+.store {
+  display: block;
+  width: 98.8vw;
+  height: 100%;
+  position: static;
+  padding-bottom: 450px;
+}
+
+.articles {
+  width: 50%;
+  display: block;
+  float: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  border-right: 1px solid black;
+}
+.articlesDetail {
+  width: 50%;
+  display: block;
+  float: right;
+}

@@ -1,0 +1,34 @@
+.carruselitem {
+  height: 900px;
+  background-color: black;
+  position: relative;
+}
+
+.carruselcuadro {
+  height: 100%;
+  display: block;
+  position: absolute;
+}
+
+.carruselimagen {
+  margin-top: 30px;
+  height: 65vh;
+  top: 0;
+  display: block;
+}
+.carruselTextoTitulo {
+  margin-top: 10px;
+  color: black;
+  font-size: 40px;
+  border-radius: 20px;
+  padding: 0px;
+  background-color: white;
+}
+.carruseltexto {
+  margin-top: 10px;
+  color: black;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 1px;
+  background-color: white;
+}

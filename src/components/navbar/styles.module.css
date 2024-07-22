@@ -1,0 +1,32 @@
+.root {
+  top: 0;
+  width: 100vw;
+  position: fixed;
+  height: 8vh;
+  z-index: 9999;
+  background-color: white;
+}
+
+.Navbar {
+}
+
+.options {
+  text-align: center;
+  padding: 9px;
+  width: 120px;
+  height: 45px;
+  color: black;
+  border-radius: 10px;
+  border: 2px solid black;
+  display: block;
+  margin-left: 20px;
+}
+
+.options:hover {
+  color: red;
+}
+
+.linked {
+  background-color: black;
+  color: white;
+}

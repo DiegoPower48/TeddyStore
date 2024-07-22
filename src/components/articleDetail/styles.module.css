@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  height: 100%;
+}
+
+.titulo {
+  height: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.image {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.detail {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.comment {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
