@@ -15,12 +15,8 @@ function NavigationBar() {
   const [clicked, setClicked] = useState("");
   const { watch, register, handleSubmit } = useForm();
   const { isAutenticated, logout, count, searchTeddy } = useAuth();
-  const URL = import.meta.env.VITE_API_URL;
-  const navigate = useNavigate();
 
-  const Datos = () => {
-    logout();
-  };
+  const navigate = useNavigate();
 
   const teddy = watch("teddy");
 
