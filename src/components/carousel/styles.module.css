@@ -1,18 +1,25 @@
-.carruselitem {
-  height: 900px;
+.carrusel {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  width: 70vw;
   background-color: black;
-  position: relative;
+}
+
+.carruselitem {
+  height: 77vh;
+  width: 77%;
 }
 
 .carruselcuadro {
+  width: 100%;
   height: 100%;
-  display: block;
-  position: absolute;
+  padding-right: 100px;
+  padding-left: 100px;
 }
 
 .carruselimagen {
   margin-top: 30px;
-  height: 65vh;
+  height: 50vh;
   top: 0;
   display: block;
 }

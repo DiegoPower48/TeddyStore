@@ -1,14 +1,13 @@
 .store {
+  display: block;
   width: 100vw;
-  height: 83vh;
+  height: 100%;
   position: static;
-  overflow-y: hidden;
   padding-bottom: 450px;
-  background-color: white;
 }
 
 .articles {
-  width: 50%;
+  width: 100%;
   display: block;
   float: left;
   display: grid;
@@ -16,10 +15,16 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   border-right: 1px solid black;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  overflow-y: hidden;
 }
+
 .articlesDetail {
+  margin-top: 7vh;
+  position: fixed;
+  top: 0;
+  right: 0;
   width: 50%;
-  height: 83vh;
-  display: block;
-  float: right;
 }

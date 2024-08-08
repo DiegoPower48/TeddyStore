@@ -2,28 +2,52 @@
   top: 0;
   width: 100vw;
   position: fixed;
-  height: 8vh;
+  height: 7vh;
   z-index: 9999;
   background-color: white;
+  border-bottom: 1px solid black;
 }
 
 .Navbar {
 }
 
+.username {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 15px;
+  margin-right: 30px;
+}
+.username:hover {
+  background-color: black;
+  color: white;
+}
+
+.button {
+  text-align: center;
+  margin-right: 20px;
+  width: 20%;
+  display: flex;
+}
+
 .options {
   text-align: center;
-  padding: 9px;
-  width: 120px;
-  height: 45px;
+  padding: 4px;
+  width: 100px;
+  height: 40px;
   color: black;
   border-radius: 10px;
   border: 2px solid black;
   display: block;
-  margin-left: 20px;
+  margin-left: 10px;
+}
+.menu {
+  padding-left: 20px;
 }
 
 .options:hover {
-  color: red;
+  background-color: black;
+  color: white;
 }
 
 .linked {

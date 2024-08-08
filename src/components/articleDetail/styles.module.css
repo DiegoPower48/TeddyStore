@@ -1,28 +1,66 @@
 .container {
   display: grid;
+
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto;
   height: 100%;
+  overflow-y: hidden;
+  background-color: white;
 }
 
 .titulo {
-  height: 30px;
+  height: 80px;
   padding-right: 10px;
   padding-left: 10px;
+  text-align: center;
+  font-size: 40px;
 }
 .image {
-  width: 100%;
+  width: 50%;
+  display: block;
+  float: left;
+  border-radius: 20px;
   padding-right: 10px;
   padding-left: 10px;
 }
 
 .detail {
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
-.comment {
-  width: 100%;
-  padding-right: 10px;
-  padding-left: 10px;
+.price {
+  width: 50%;
+  font-size: 30px;
+  display: block;
+  float: right;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.priceNumber {
+  width: 50%;
+  font-size: 50px;
+  display: block;
+  float: right;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.default {
+  padding-left: 60px;
+  padding-top: 40px;
+  font-size: 25px;
+  color: gray;
+  height: 83vh;
+  background-color: white;
+}
+
+.boton {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 20px;
 }

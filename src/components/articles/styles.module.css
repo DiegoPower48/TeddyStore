@@ -1,7 +1,50 @@
-.article {
+.container {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  background-color: white;
+  width: 50vw;
+  height: 83vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-
+.article {
+  height: 100%;
+  position: relative;
+  max-height: 400px;
+}
 .articlephoto {
   padding: 10px;
-  height: 190px;
+  height: 180px;
+  box-sizing: border-box;
+}
+
+.price {
+  font-weight: bold;
+  bottom: 5px;
+  right: 15px;
+  position: absolute;
+  display: block;
+}
+
+.notfound {
+  color: gray;
+  padding-left: 80px;
+  padding-top: 20px;
+  font-size: 30px;
+  width: 40vw;
+}
+
+.container::-webkit-scrollbar {
+  width: var(--width, 20px);
+  background: white;
+}
+
+.container::-webkit-scrollbar-track {
+  background: black;
+}
+.container::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 7px;
+  border: 1px solid black;
 }

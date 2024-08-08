@@ -4,23 +4,32 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/authcontext";
 
 function NavigationBar() {
+  const username = localStorage.getItem("correo");
   const [clicked, setClicked] = useState("");
   const { watch, register, handleSubmit } = useForm();
-  const navigate = useNavigate();
+  const { isAutenticated, logout, count, searchTeddy } = useAuth();
   const URL = import.meta.env.VITE_API_URL;
-  const buscado = watch("item");
+  const navigate = useNavigate();
 
-  const search = () => {
-    navigate(`/store/${buscado}`);
-    console.log(URL);
+  const Datos = () => {
+    logout();
   };
+
+  const teddy = watch("teddy");
+
+  const search = async () => {
+    await searchTeddy(teddy);
+    navigate("/search");
+  };
+
+  useEffect(() => {}, [count]);
 
   return (
     <div className={styles.root}>
@@ -45,34 +54,66 @@ function NavigationBar() {
             >
               Store
             </NavLink>
-            <NavLink
-              className={`${styles.options} ${
-                clicked === "temporada" ? styles.linked : ""
-              }`}
-              onClick={() => setClicked("temporada")}
-              to=""
-            >
-              Temporada
-            </NavLink>
           </Nav>
           <Form className="d-flex" onSubmit={handleSubmit(search)}>
             <Form.Control
               type="search"
               placeholder="Search"
-              className="me-2"
+              className={`${styles.search} me-2 `}
               aria-label="Search"
-              {...register("item", { required: true })}
+              {...register("teddy")}
             />
-            <Button type="submit" variant="outline-success">
+            <Button variant="dark" onClick={() => search()}>
               Search
             </Button>
           </Form>
-          <NavDropdown title="Username" id="navbarScrollingDropdown">
-            <NavDropdown.Item href="#action3">Compras</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">Historial</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action5">Cerrar Sesion</NavDropdown.Item>
-          </NavDropdown>
+          {isAutenticated ? (
+            <>
+              <NavDropdown
+                title={`carrito: ${count}`}
+                id="navbarScrollingDropdown"
+              >
+                <NavLink className={styles.menu} to="/carrito">
+                  Ver detalle
+                </NavLink>
+                <NavDropdown.Divider />
+                <NavLink className={styles.menu} to="/payment">
+                  Ir a pagar
+                </NavLink>
+              </NavDropdown>
+
+              <NavDropdown
+                className={styles.username}
+                title={username}
+                id="navbarScrollingDropdown"
+              >
+                <NavDropdown.Item onClick={() => logout()}>
+                  Cerrar Sesion
+                </NavDropdown.Item>
+              </NavDropdown>
+            </>
+          ) : (
+            <div className={styles.button}>
+              <NavLink
+                className={`${styles.options} ${
+                  clicked === "Login" ? styles.linked : ""
+                }`}
+                onClick={() => setClicked("Login")}
+                to="/login"
+              >
+                Login
+              </NavLink>
+              <NavLink
+                className={`${styles.options} ${
+                  clicked === "Register" ? styles.linked : ""
+                }`}
+                onClick={() => setClicked("Register")}
+                to="/registro"
+              >
+                Register
+              </NavLink>
+            </div>
+          )}
         </Container>
       </Navbar>
     </div>

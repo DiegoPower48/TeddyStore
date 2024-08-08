@@ -1,9 +1,32 @@
 .footer {
   position: fixed;
   bottom: 0px;
-  width: 100vw;
+  padding-top: 20px;
   height: 10vh;
+  width: 100vw;
+  border-top: 1px solid white;
   background-color: black;
   color: white;
   z-index: 2;
+}
+
+.texto {
+  padding-left: 100px;
+  display: block;
+  float: left;
+  font-size: 20px;
+}
+.iconos {
+  padding-right: 100px;
+  text-align: center;
+  display: block;
+  float: right;
+}
+.icono {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border: 2px solid white;
+  border-radius: 300px;
+  margin-right: 20px;
 }

@@ -1,6 +1,19 @@
 .root {
   background-color: black;
-  width: 98.8vw;
-  position: sticky;
-  top: 0;
+  height: 83vh;
+  background: url(https://wallpapercave.com/wp/wp6533702.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.titulo {
+  width: 70vw;
+  font-size: 40px;
+  background-color: black;
+  color: white;
+  padding-left: 60px;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  width: 70vw;
+  background-color: black;
 }

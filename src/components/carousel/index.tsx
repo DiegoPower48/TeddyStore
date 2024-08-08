@@ -1,7 +1,21 @@
 import Carousel from "react-bootstrap/Carousel";
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
+import { useAuth } from "../../context/authcontext";
+import { useEffect, useState } from "react";
 
 function Carrusel() {
+  const { GetTeddys } = useAuth();
+  const [teddy, setTeddys] = useState([""]);
+
+  useEffect(() => {
+    async function cargarTeddys() {
+      const res = await GetTeddys();
+      setTeddys(res);
+    }
+    cargarTeddys();
+  }, []);
+
   const items = [
     {
       titulo: "MAURO2",
@@ -23,19 +37,26 @@ function Carrusel() {
 
   return (
     <Carousel className={styles.carrusel}>
-      {items.map((item, i) => (
+      {teddy.map((item, i) => (
         <Carousel.Item key={i} interval={3000} className={styles.carruselitem}>
-          <Carousel.Caption className={styles.carruselcuadro}>
-            <span
-              style={{
-                backgroundImage: `url(${item.fondo})`,
-                backgroundSize: "100% 100%",
+          <Link to={`/store/${item._id}`} replace>
+            <Carousel.Caption
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className={styles.carruselimagen}
-            ></span>
-            <h3 className={styles.carruselTextoTitulo}>{item.titulo}</h3>
-            <p className={styles.carruseltexto}>{item.descripcion}</p>
-          </Carousel.Caption>
+              className={styles.carruselcuadro}
+            >
+              <span
+                style={{
+                  backgroundImage: `url(${item.image})`,
+                  backgroundSize: "100% 100%",
+                }}
+                className={styles.carruselimagen}
+              ></span>
+              <h3 className={styles.carruselTextoTitulo}>{item.item}</h3>
+              <p className={styles.carruseltexto}>{item.shortDescription}</p>
+            </Carousel.Caption>
+          </Link>
         </Carousel.Item>
       ))}
     </Carousel>
