@@ -48,3 +48,20 @@
   border-radius: 7px;
   border: 1px solid black;
 }
+@media (max-width: 1024px) {
+}
+@media (max-width: 850px) {
+  .container {
+    display: block;
+  }
+  .article {
+    margin-left: 30px;
+    height: 320px;
+    position: relative;
+  }
+}
+@media (max-width: 500px) {
+  .article {
+    margin-left: 0px;
+  }
+}

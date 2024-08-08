@@ -1,6 +1,5 @@
 .container {
   display: grid;
-
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto;
   height: 100%;
@@ -63,4 +62,33 @@
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 20px;
+}
+@media (max-width: 850px) {
+  .titulo {
+    height: 60px;
+    padding-right: 0px;
+    padding-left: 0px;
+    text-align: center;
+    font-size: 20px;
+  }
+  .price {
+    padding-top: 0px;
+    width: 50%;
+    font-size: 20px;
+    display: block;
+    float: right;
+    padding-right: 30px;
+    padding-left: 30px;
+    height: 20px;
+  }
+
+  .priceNumber {
+    width: 50%;
+    font-size: 30px;
+    display: block;
+    float: right;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 }

@@ -39,3 +39,30 @@
   padding: 1px;
   background-color: white;
 }
+@media (max-width: 1024px) {
+  .carrusel {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    background-color: black;
+  }
+  .carruselcuadro {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .carruselTextoTitulo {
+    font-size: 20px;
+  }
+  .carruseltexto {
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .carrusel {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    background-color: black;
+  }
+}

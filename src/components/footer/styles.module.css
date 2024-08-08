@@ -30,3 +30,24 @@
   border-radius: 300px;
   margin-right: 20px;
 }
+
+@media (max-width: 1024px) {
+  .texto {
+    display: block;
+    float: left;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .texto {
+    padding-left: 0px;
+  }
+  .iconos {
+    padding-right: 0;
+  }
+  .icono {
+    height: 30px;
+    width: 30px;
+  }
+}

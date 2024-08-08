@@ -17,3 +17,19 @@
   width: 70vw;
   background-color: black;
 }
+@media (max-width: 1024px) {
+  .titulo {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-size: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 17px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+  }
+}

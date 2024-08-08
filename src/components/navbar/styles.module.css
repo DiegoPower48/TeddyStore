@@ -54,3 +54,19 @@
   background-color: black;
   color: white;
 }
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 11px;
+  }
+  .options {
+    padding: 5px;
+    height: 35px;
+    width: 70px;
+  }
+}
+@media (max-width: 600px) {
+  .options {
+    width: 50px;
+  }
+}
