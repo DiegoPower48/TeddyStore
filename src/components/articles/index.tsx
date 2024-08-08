@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./styles.module.css";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
@@ -12,10 +11,10 @@ function Articles(props: Props) {
 
   return (
     <div className={styles.container}>
-      {teddy.length === 0 ? (
+      {!teddy ? (
         <div className={styles.notfound}>No hay elementos</div>
       ) : (
-        teddy.map((e, i) => (
+        teddy.map((e: any, i: number) => (
           <Card key={i} className={styles.article} style={{ width: "18rem" }}>
             <Link to={`/${direction}/${e._id}`} replace>
               <Card.Img

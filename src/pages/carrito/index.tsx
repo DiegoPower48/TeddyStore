@@ -16,7 +16,7 @@ function Carrito() {
   useEffect(() => {
     async function CargarPerfil() {
       const data = await getProfile();
-      const res = await GetCart(data.carrito);
+      const res: any = await GetCart(data.carrito);
       setTeddys(res);
       setLoading(false);
     }

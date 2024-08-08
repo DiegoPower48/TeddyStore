@@ -6,11 +6,11 @@ import { useEffect, useState } from "react";
 
 function Carrusel() {
   const { GetTeddys } = useAuth();
-  const [teddy, setTeddys] = useState([""]);
+  const [teddy, setTeddys] = useState<any>([""]);
 
   useEffect(() => {
     async function cargarTeddys() {
-      const res = await GetTeddys();
+      const res: any = await GetTeddys();
       setTeddys(res);
     }
     cargarTeddys();
@@ -18,7 +18,7 @@ function Carrusel() {
 
   return (
     <Carousel className={styles.carrusel}>
-      {teddy.map((item, i) => (
+      {teddy.map((item: any, i: number) => (
         <Carousel.Item key={i} interval={3000} className={styles.carruselitem}>
           <Link to={`/store/${item._id}`} replace>
             <Carousel.Caption

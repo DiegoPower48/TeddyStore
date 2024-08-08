@@ -11,17 +11,25 @@ import toast, { Toaster } from "react-hot-toast";
 interface AuthContextType {
   Registrar: (data: any) => Promise<void>;
   Login: (data: any) => Promise<void>;
-  GetTeddy: (data: any) => Promise<void>;
-  GetTeddys: () => Promise<void>;
-  GetCart: (data: any) => Promise<void>;
-  getProfile: () => Promise<void>;
-  AddTeddy: (data: any) => Promise<void>;
+  GetTeddy: (data: any) => Promise<any>;
+  GetTeddys: () => Promise<any>;
+  GetCart: (data: any) => Promise<any>;
+  getProfile: () => Promise<any>;
+  AddTeddy: (data: any) => Promise<any>;
   isAutenticated: boolean;
   errors: string[];
   loading: boolean;
-  user: string;
+  setUser: (data: any) => void;
+  user: any;
   logout: () => void;
   setErrors: React.Dispatch<React.SetStateAction<string[]>>;
+  searched: any[];
+  setSearched: React.Dispatch<React.SetStateAction<any[]>>;
+  count: number;
+  searchTeddy: (data: any) => Promise<any>;
+  contador: number;
+  DeleteItem: (teddy: string) => Promise<void>;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const AuthContext = createContext<AuthContextType | null>(null);
@@ -39,13 +47,13 @@ interface Props {
 }
 
 export const AuthProvider = ({ children }: Props) => {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState<string | null>("");
   const [isAutenticated, setIsAuthenticated] = useState(false);
   const [errors, setErrors] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
-  const [count, setCount] = useState("");
-  const [contador, setContador] = useState("");
-  const [searched, setSearched] = useState([]);
+  const [count, setCount] = useState<number>(0);
+  const [contador, setContador] = useState<number>(0);
+  const [searched, setSearched] = useState<any[]>([]);
 
   const Registrar = async (data: any) => {
     try {
@@ -138,7 +146,7 @@ export const AuthProvider = ({ children }: Props) => {
   const getProfile = async () => {
     try {
       isAutenticated === true;
-      const res = await axios.get("profile", { correo: user });
+      const res = await axios.get("profile", { params: { correo: user } });
       return res.data;
     } catch (error) {
       console.log(error);
@@ -227,6 +235,7 @@ export const AuthProvider = ({ children }: Props) => {
         logout,
         getProfile,
         searched,
+        setSearched,
         GetCart,
         count,
         searchTeddy,
@@ -237,6 +246,7 @@ export const AuthProvider = ({ children }: Props) => {
         setErrors,
         DeleteItem,
         user,
+        setUser,
       }}
     >
       {children}

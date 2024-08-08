@@ -13,7 +13,7 @@ function Store() {
 
   useEffect(() => {
     async function cargarTeddys() {
-      const res = await GetTeddys();
+      const res: any = await GetTeddys();
       setLoading(false);
       setTeddys(res);
     }

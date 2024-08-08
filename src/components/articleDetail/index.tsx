@@ -11,7 +11,7 @@ interface Props {
 
 function ArticleDetail(props: Props) {
   const { direction } = props;
-  const [teddy, setTeddy] = useState([""]);
+  const [teddy, setTeddy] = useState<any>([""]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const { AddTeddy, DeleteItem, isAutenticated } = useAuth();
@@ -20,21 +20,21 @@ function ArticleDetail(props: Props) {
 
   const params = useParams();
 
-  const purchaseTeddy = async (data) => {
+  const purchaseTeddy = async (data: any) => {
     if (isAutenticated) {
       return await AddTeddy(data);
     }
     navigate("/login");
   };
 
-  const dropTeddy = async (data) => {
+  const dropTeddy = async (data: any) => {
     await DeleteItem(data);
     navigate("/carrito");
   };
 
   useEffect(() => {
     async function cargarTeddy() {
-      const res = await GetTeddy(params.id);
+      const res: any = await GetTeddy(params.id);
       setLoading(false);
       setTeddy(res);
     }

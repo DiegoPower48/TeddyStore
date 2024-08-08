@@ -2,11 +2,9 @@ import Articles from "../../components/articles";
 import ArticleDetail from "../../components/articleDetail";
 import styles from "./styles.module.css";
 import { useAuth } from "../../context/authcontext";
-import { useEffect, useState } from "react";
 
 function Search() {
-  const { GetTeddys, searched } = useAuth();
-  const [teddy, setTeddys] = useState([""]);
+  const { searched } = useAuth();
 
   return (
     <div className={styles.store}>
