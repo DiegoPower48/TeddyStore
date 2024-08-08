@@ -12,6 +12,7 @@
   height: 100%;
   position: relative;
   max-height: 400px;
+  width: 90%;
 }
 .articlephoto {
   padding: 10px;
@@ -52,11 +53,13 @@
 }
 @media (max-width: 850px) {
   .container {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
   }
   .article {
-    margin-left: 30px;
+    padding-left: 10px;
     height: 320px;
+    width: 100%;
     position: relative;
   }
 }

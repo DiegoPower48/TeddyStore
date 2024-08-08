@@ -15,7 +15,7 @@ function Articles(props: Props) {
         <div className={styles.notfound}>No hay elementos</div>
       ) : (
         teddy.map((e: any, i: number) => (
-          <Card key={i} className={styles.article} style={{ width: "18rem" }}>
+          <Card key={i} className={styles.article}>
             <Link to={`/${direction}/${e._id}`} replace>
               <Card.Img
                 variant="top"

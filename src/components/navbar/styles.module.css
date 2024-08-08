@@ -65,8 +65,3 @@
     width: 70px;
   }
 }
-@media (max-width: 600px) {
-  .options {
-    width: 50px;
-  }
-}

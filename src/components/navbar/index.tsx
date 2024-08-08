@@ -51,15 +51,22 @@ function NavigationBar() {
               Store
             </NavLink>
           </Nav>
-          <Form className="d-flex" onSubmit={handleSubmit(search)}>
+          <Form
+            className={`d-flex ${styles.search}`}
+            onSubmit={handleSubmit(search)}
+          >
             <Form.Control
               type="search"
               placeholder="Search"
-              className={`${styles.search} me-2 `}
+              className={`${styles.searchArea} me-2 `}
               aria-label="Search"
               {...register("teddy")}
             />
-            <Button variant="dark" onClick={() => search()}>
+            <Button
+              className={styles.boton}
+              variant="dark"
+              onClick={() => search()}
+            >
               Search
             </Button>
           </Form>
