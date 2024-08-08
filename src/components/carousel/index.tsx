@@ -16,25 +16,6 @@ function Carrusel() {
     cargarTeddys();
   }, []);
 
-  const items = [
-    {
-      titulo: "MAURO2",
-      descripcion: "Pez betta muy amigable y muy hermoso, consume poca comida",
-      fondo: "https://i.ibb.co/gZ9LYB6/mauro2.jpg",
-    },
-    {
-      titulo: "ONCE",
-      descripcion:
-        "Gata muy gorda, juguetona y muy protectora, le gusta dormir en camas y sofas",
-      fondo: "https://i.ibb.co/G0dnYFt/once.jpg",
-    },
-    {
-      titulo: "MICHU",
-      descripcion: "Un gato 'hermoso' amarillo, bastante travieso",
-      fondo: "https://i.ibb.co/7WWZhyx/Michu.jpg",
-    },
-  ];
-
   return (
     <Carousel className={styles.carrusel}>
       {teddy.map((item, i) => (
