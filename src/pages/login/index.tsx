@@ -48,7 +48,7 @@ function Login() {
           type="submit"
           onClick={handleSubmit(Datos)}
         >
-          Login
+          Log in
         </button>
       </Form>
     </div>

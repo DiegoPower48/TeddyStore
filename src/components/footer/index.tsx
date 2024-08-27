@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
       <div className={styles.footer}>
-        <div className={styles.texto}>Pagina web creada por Diego Torres</div>
+        <div className={styles.texto}>Website created by Diego Torres</div>
         <div className={styles.iconos}>
           <a href="https://github.com/DiegoPower48" target="_blank">
             <img

@@ -73,15 +73,15 @@ function NavigationBar() {
           {isAutenticated ? (
             <>
               <NavDropdown
-                title={`carrito: ${count}`}
+                title={`Cart: ${count}`}
                 id="navbarScrollingDropdown"
               >
                 <NavLink className={styles.menu} to="/carrito">
-                  Ver detalle
+                  View details
                 </NavLink>
                 <NavDropdown.Divider />
                 <NavLink className={styles.menu} to="/payment">
-                  Ir a pagar
+                  Proceed to checkout
                 </NavLink>
               </NavDropdown>
 
@@ -91,7 +91,7 @@ function NavigationBar() {
                 id="navbarScrollingDropdown"
               >
                 <NavDropdown.Item onClick={() => logout()}>
-                  Cerrar Sesion
+                  Log out
                 </NavDropdown.Item>
               </NavDropdown>
             </>
@@ -104,7 +104,7 @@ function NavigationBar() {
                 onClick={() => setClicked("Login")}
                 to="/login"
               >
-                Login
+                Log in
               </NavLink>
               <NavLink
                 className={`${styles.options} ${
@@ -113,7 +113,7 @@ function NavigationBar() {
                 onClick={() => setClicked("Register")}
                 to="/registro"
               >
-                Register
+                Sign in
               </NavLink>
             </div>
           )}

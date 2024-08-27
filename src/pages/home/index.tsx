@@ -4,9 +4,7 @@ import Carrusel from "../../components/carousel";
 function Home() {
   return (
     <div className={styles.root}>
-      <div className={styles.titulo}>
-        Bienvenido a nuestra tienda de Peluches!!💗
-      </div>
+      <div className={styles.titulo}>Welcome to our Stuffed Toy Store!!💗</div>
       <Carrusel />
     </div>
   );

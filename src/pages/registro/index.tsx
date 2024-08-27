@@ -48,7 +48,7 @@ function Registro() {
           type="submit"
           onClick={handleSubmit(Datos)}
         >
-          Registrar
+          Sign in
         </button>
       </Form>
     </div>

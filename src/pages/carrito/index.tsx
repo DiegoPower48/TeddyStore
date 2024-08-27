@@ -33,7 +33,16 @@ function Carrito() {
     <div className={styles.store}>
       <div className={styles.articles}>
         {loading ? (
-          <Spinner animation="border" role="status">
+          <Spinner
+            style={{
+              fontSize: "40px",
+              padding: "10%",
+              marginLeft: "20vw",
+              marginTop: "20vh",
+            }}
+            animation="border"
+            role="status"
+          >
             <span className="visually-hidden">Loading...</span>
           </Spinner>
         ) : (

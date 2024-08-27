@@ -45,15 +45,13 @@ function ArticleDetail(props: Props) {
     <>
       {!loading ? (
         teddy === undefined ? (
-          <div className={styles.default}>
-            SELECCIONA UN ITEM PARA VER EL DETALLE
-          </div>
+          <div className={styles.default}>SELECT AN ITEM TO VIEW DETAILS</div>
         ) : direction != "carrito" ? (
           <div className={styles.container}>
             <div className={styles.titulo}>-= {teddy.item} =-</div>
             <div className={styles.item}>
               <img className={styles.image} src={teddy.image} />
-              <span className={styles.price}>Precio:</span>
+              <span className={styles.price}>Price:</span>
               <div className={styles.priceNumber}>${teddy.price}</div>
             </div>
             <div className={styles.detail}>{teddy.description}</div>
@@ -64,9 +62,7 @@ function ArticleDetail(props: Props) {
                 purchaseTeddy(teddy._id);
               }}
             >
-              {isAutenticated
-                ? "Añadir al carrito"
-                : "Inicia sesión para comprar"}
+              {isAutenticated ? "Add to cart" : "Log in to purchase"}
             </Button>
           </div>
         ) : (
@@ -74,7 +70,7 @@ function ArticleDetail(props: Props) {
             <div className={styles.titulo}>{teddy.item}</div>
             <div className={styles.item}>
               <img className={styles.image} src={teddy.image} />
-              <span className={styles.price}>Precio:</span>
+              <span className={styles.price}>Price:</span>
               <div className={styles.priceNumber}>${teddy.price}</div>
             </div>
             <div className={styles.detail}>{teddy.description}</div>
@@ -86,14 +82,21 @@ function ArticleDetail(props: Props) {
               }}
               style={{ backgroundColor: "red", border: "1px solid red" }}
             >
-              Eliminar del carrito
+              Remove from cart
             </Button>
           </div>
         )
       ) : (
-        <Spinner animation="border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
+        <Spinner
+          style={{
+            fontSize: "40px",
+            padding: "5%",
+            marginLeft: "20vw",
+            marginTop: "20vh",
+          }}
+          animation="border"
+          role="status"
+        ></Spinner>
       )}
     </>
   );

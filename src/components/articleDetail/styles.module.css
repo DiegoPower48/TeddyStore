@@ -51,7 +51,8 @@
   padding-left: 30px;
 }
 .default {
-  padding-left: 60px;
+  padding-right: 8vw;
+  padding-left: 8vw;
   padding-top: 40px;
   font-size: 25px;
   color: gray;
@@ -60,9 +61,7 @@
 }
 
 .boton {
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 20px;
   border-radius: 20px;
 }
 @media (max-width: 850px) {
