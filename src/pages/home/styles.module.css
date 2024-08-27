@@ -1,5 +1,6 @@
 .root {
   background-color: black;
+  width: 100vw;
   height: 83vh;
   background: url(https://wallpapercave.com/wp/wp6533702.jpg);
   background-position: center;
@@ -7,29 +8,30 @@
 }
 
 .titulo {
-  width: 70vw;
   font-size: 40px;
   background-color: black;
   color: white;
-  padding-left: 60px;
+  padding-left: 100px;
+  display: block;
+  background-color: black;
   margin-left: 15vw;
   margin-right: 15vw;
   width: 70vw;
-  background-color: black;
 }
 @media (max-width: 1024px) {
   .titulo {
+    font-size: 30px;
     width: 80vw;
     margin-left: 10vw;
     margin-right: 10vw;
-    font-size: 20px;
+    padding-left: 50px;
   }
 }
 @media (max-width: 600px) {
   .titulo {
-    font-size: 17px;
     margin-left: 5vw;
     margin-right: 5vw;
     width: 90vw;
+    font-size: 20px;
   }
 }

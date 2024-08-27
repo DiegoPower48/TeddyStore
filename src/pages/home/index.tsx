@@ -5,6 +5,7 @@ function Home() {
   return (
     <div className={styles.root}>
       <div className={styles.titulo}>Welcome to our Stuffed Toy Store!!💗</div>
+
       <Carrusel />
     </div>
   );
