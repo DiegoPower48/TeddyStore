@@ -2,7 +2,7 @@
   top: 0;
   width: 100vw;
   position: fixed;
-  height: 7vh;
+  height: 5vw;
   z-index: 9999;
   background-color: white;
   border-bottom: 1px solid black;
@@ -21,30 +21,19 @@
 }
 
 .button {
-  text-align: center;
   margin-right: 20px;
   width: 20%;
-  display: flex;
 }
 
 .options {
   text-align: center;
-  padding: 4px;
   width: 100px;
-  height: 40px;
+  height: 3.5vw;
+  padding: 1vw;
   color: black;
   border-radius: 10px;
   border: 2px solid black;
-  display: block;
   margin-left: 10px;
-}
-.menu {
-  padding-left: 7px;
-  padding-right: 7px;
-  text-align: center;
-  display: block;
-  width: 100%;
-  height: 100%;
 }
 
 .options:hover {
@@ -59,17 +48,18 @@
 
 @media (max-width: 1024px) {
   :root {
-    font-size: 11px;
+    font-size: 3vw;
   }
+
   .options {
-    padding: 5px;
-    height: 35px;
+    text-align: center;
     width: 70px;
     font-size: 10px;
+    transform: translate(-50%, -10%);
   }
 }
 @media (max-width: 600px) {
   .options {
-    font-size: 9px;
+    font-size: 3vw;
   }
 }

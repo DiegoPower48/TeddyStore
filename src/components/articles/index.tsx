@@ -16,7 +16,11 @@ function Articles(props: Props) {
       ) : (
         teddy.map((e: any, i: number) => (
           <Card key={i} className={styles.article}>
-            <Link to={`/${direction}/${e._id}`} replace>
+            <Link
+              to={`/${direction}/${e._id}`}
+              style={{ height: "16vw" }}
+              replace
+            >
               <Card.Img
                 variant="top"
                 src={e.image}
@@ -24,8 +28,10 @@ function Articles(props: Props) {
               />
             </Link>
             <Card.Body>
-              <Card.Title>{e.item}</Card.Title>
-              <Card.Text>{e.shortDescription}</Card.Text>
+              <Card.Title style={{ textAlign: "center" }}>{e.item}</Card.Title>
+              {/* <Card.Text className={styles.cardText}>
+                {e.shortDescription}
+              </Card.Text> */}
               <Card.Text className={styles.price}>Precio: ${e.price}</Card.Text>
             </Card.Body>
           </Card>

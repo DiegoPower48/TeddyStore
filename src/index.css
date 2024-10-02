@@ -1,6 +1,5 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
   color-scheme: light dark;
   background-color: #242424;
   font-synthesis: none;
@@ -9,6 +8,7 @@
   -moz-osx-font-smoothing: grayscale;
   margin-bottom: 10vh;
   margin-top: 7vh;
+  font-size: 1.1vw;
 }
 
 a {

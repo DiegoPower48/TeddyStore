@@ -17,12 +17,12 @@
   font-size: 40px;
 }
 .image {
-  width: 50%;
+  width: 60%;
+  border: 5px solid black;
   display: block;
   float: left;
   border-radius: 20px;
-  padding-right: 10px;
-  padding-left: 10px;
+  margin-left: 20px;
 }
 
 .detail {
@@ -32,8 +32,8 @@
   padding-left: 30px;
 }
 .price {
-  width: 50%;
-  font-size: 30px;
+  width: 30%;
+  font-size: 20px;
   display: block;
   float: right;
   padding-top: 30px;
@@ -42,7 +42,7 @@
 }
 
 .priceNumber {
-  width: 50%;
+  width: 30%;
   font-size: 50px;
   display: block;
   float: right;
@@ -61,7 +61,8 @@
 }
 
 .boton {
-  margin: 20px;
+  margin: 2vw;
+  height: 3vw;
   border-radius: 20px;
 }
 @media (max-width: 850px) {

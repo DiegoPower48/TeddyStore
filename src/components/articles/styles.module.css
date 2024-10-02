@@ -6,26 +6,36 @@
   width: 50vw;
   height: 83vh;
   display: grid;
+  gap: 2vw;
   grid-template-columns: 1fr 1fr;
 }
 .article {
-  height: 100%;
+  height: 23vw;
   position: relative;
   max-height: 400px;
   width: 90%;
 }
 .articlephoto {
-  padding: 10px;
-  height: 180px;
+  margin-right: 10px;
+  scale: 0.8;
+  height: 17vw;
+  box-shadow: 1px 1px 8px 1px black;
+  border-radius: 20px;
   box-sizing: border-box;
 }
 
-.price {
-  font-weight: bold;
-  bottom: 5px;
-  right: 15px;
-  position: absolute;
+.cardText {
   display: block;
+  height: 4vw;
+  overflow: hidden;
+}
+
+.price {
+  display: block;
+  height: 1vw;
+  font-weight: bold;
+  width: 100%;
+  text-align: right;
 }
 
 .notfound {
@@ -58,7 +68,7 @@
   }
   .article {
     padding-left: 10px;
-    height: 320px;
+
     width: 100%;
     position: relative;
   }
